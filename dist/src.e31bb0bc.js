@@ -28382,7 +28382,7 @@ var ForeGround = function ForeGround() {
     style: {
       position: 'absolute',
       bottom: 0,
-      width: 306,
+      width: 288,
       height: 108,
       background: "url(".concat(_fg.default, ")")
     }
@@ -28401,7 +28401,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _Bird = _interopRequireDefault(require("./Bird"));
 
@@ -28413,7 +28413,23 @@ var _bg = _interopRequireDefault(require("../images/bg.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 var Game = function Game() {
+  (0, _react.useEffect)(function () {
+    var handlePressAndClick = function handlePressAndClick(e) {
+      if (e.keyCode === 32 || e.keyCode === 38 || e.buttons % 2 === 0) {
+        fly();
+      } // 'space' button, 'top-arrow button and left click
+
+    };
+
+    document.addEventListener('keydown', handlePressAndClick);
+    document.addEventListener('click', handlePressAndClick);
+  }, [] // do one time
+  );
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {
       position: 'relative',
@@ -28422,6 +28438,10 @@ var Game = function Game() {
       background: "url(".concat(_bg.default, ")")
     }
   }, /*#__PURE__*/_react.default.createElement(_Bird.default, null), /*#__PURE__*/_react.default.createElement(_Pipe.default, null), /*#__PURE__*/_react.default.createElement(_ForeGround.default, null));
+};
+
+var fly = function fly() {
+  console.log("abc");
 };
 
 var _default = Game;
@@ -28486,7 +28506,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52846" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54551" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
