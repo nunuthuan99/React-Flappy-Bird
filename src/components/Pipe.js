@@ -1,5 +1,8 @@
 import React from 'react'
 
+import TopPipeImage from '../images/pipe-top.png'
+import BottomPipeImage from '../images/pipe-bottom.png'
+
 const Pine = () => {
     return (
         <div>
@@ -7,17 +10,18 @@ const Pine = () => {
                 position: 'absolute',
                 top: 0,
                 left: 150,
-                width: 50,
+                width: 52,
                 height: 200,
-                backgroundColor: 'green'
+                background: `url(${TopPipeImage})`,
+                backgroundPosition: 'bottom',
             }}></div>
             <div style={{
                 position: 'absolute',
                 top: 200 + 100,
                 left: 150,
-                width: 50,
+                width: 52,
                 height: 200,
-                backgroundColor: 'green'
+                background: `url(${BottomPipeImage})`,
             }}></div>
         </div>
     )

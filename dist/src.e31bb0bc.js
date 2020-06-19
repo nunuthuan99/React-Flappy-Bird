@@ -28285,7 +28285,9 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"components/Bird.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"images/bird.png":[function(require,module,exports) {
+module.exports = "/bird.5fd28279.png";
+},{}],"components/Bird.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28294,6 +28296,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+var _bird = _interopRequireDefault(require("../images/bird.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28303,16 +28307,20 @@ var Bird = function Bird() {
       position: 'absolute',
       top: 250,
       left: 150,
-      width: 40,
-      height: 40,
-      backgroundColor: 'yellow'
+      width: 38,
+      height: 26,
+      background: "url(".concat(_bird.default, ")")
     }
   });
 };
 
 var _default = Bird;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"components/Pipe.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../images/bird.png":"images/bird.png"}],"images/pipe-top.png":[function(require,module,exports) {
+module.exports = "/pipe-top.642f96a4.png";
+},{}],"images/pipe-bottom.png":[function(require,module,exports) {
+module.exports = "/pipe-bottom.b6b9fa3e.png";
+},{}],"components/Pipe.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28321,6 +28329,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
+
+var _pipeTop = _interopRequireDefault(require("../images/pipe-top.png"));
+
+var _pipeBottom = _interopRequireDefault(require("../images/pipe-bottom.png"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28330,25 +28342,28 @@ var Pine = function Pine() {
       position: 'absolute',
       top: 0,
       left: 150,
-      width: 50,
+      width: 52,
       height: 200,
-      backgroundColor: 'green'
+      background: "url(".concat(_pipeTop.default, ")"),
+      backgroundPosition: 'bottom'
     }
   }), /*#__PURE__*/_react.default.createElement("div", {
     style: {
       position: 'absolute',
       top: 200 + 100,
       left: 150,
-      width: 50,
+      width: 52,
       height: 200,
-      backgroundColor: 'green'
+      background: "url(".concat(_pipeBottom.default, ")")
     }
   }));
 };
 
 var _default = Pine;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"components/ForeGround.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../images/pipe-top.png":"images/pipe-top.png","../images/pipe-bottom.png":"images/pipe-bottom.png"}],"images/fg.png":[function(require,module,exports) {
+module.exports = "/fg.1e77431d.png";
+},{}],"components/ForeGround.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28358,6 +28373,8 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _fg = _interopRequireDefault(require("../images/fg.png"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var ForeGround = function ForeGround() {
@@ -28365,16 +28382,18 @@ var ForeGround = function ForeGround() {
     style: {
       position: 'absolute',
       bottom: 0,
-      width: 300,
-      height: 100,
-      backgroundColor: 'brown'
+      width: 306,
+      height: 108,
+      background: "url(".concat(_fg.default, ")")
     }
   });
 };
 
 var _default = ForeGround;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"components/Game.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","../images/fg.png":"images/fg.png"}],"images/bg.png":[function(require,module,exports) {
+module.exports = "/bg.e79a717b.png";
+},{}],"components/Game.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28390,22 +28409,24 @@ var _Pipe = _interopRequireDefault(require("./Pipe"));
 
 var _ForeGround = _interopRequireDefault(require("./ForeGround"));
 
+var _bg = _interopRequireDefault(require("../images/bg.png"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Game = function Game() {
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {
       position: 'relative',
-      width: 300,
-      height: 500,
-      backgroundColor: 'pink'
+      width: 288,
+      height: 512,
+      background: "url(".concat(_bg.default, ")")
     }
   }, /*#__PURE__*/_react.default.createElement(_Bird.default, null), /*#__PURE__*/_react.default.createElement(_Pipe.default, null), /*#__PURE__*/_react.default.createElement(_ForeGround.default, null));
 };
 
 var _default = Game;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Bird":"components/Bird.js","./Pipe":"components/Pipe.js","./ForeGround":"components/ForeGround.js"}],"components/App.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Bird":"components/Bird.js","./Pipe":"components/Pipe.js","./ForeGround":"components/ForeGround.js","../images/bg.png":"images/bg.png"}],"components/App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

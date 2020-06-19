@@ -1,13 +1,15 @@
 import React from 'react'
 
+import FgImage from '../images/fg.png'
+
 const ForeGround = () => {
     return (
         <div style = {{
             position: 'absolute',
             bottom: 0,
-            width: 300,
-            height: 100,
-            backgroundColor: 'brown',
+            width: 306,
+            height: 108,
+            background: `url(${FgImage})`,
         }}></div>
     )
 }
