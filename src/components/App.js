@@ -1,9 +1,11 @@
 import React from 'react'
 
+import Game from './Game'
+
 const App = () => {
     return (
         <div>
-            <h1>Check environment.~~</h1>
+           <Game />
         </div>
     )
 }

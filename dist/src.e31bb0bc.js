@@ -28285,7 +28285,7 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"components/App.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"../node_modules/react-dom/cjs/react-dom.development.js"}],"components/Bird.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28297,13 +28297,135 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var Bird = function Bird() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      position: 'absolute',
+      top: 250,
+      left: 150,
+      width: 40,
+      height: 40,
+      backgroundColor: 'yellow'
+    }
+  });
+};
+
+var _default = Bird;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"components/Pipe.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Pine = function Pine() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      position: 'absolute',
+      top: 0,
+      left: 150,
+      width: 50,
+      height: 200,
+      backgroundColor: 'green'
+    }
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      position: 'absolute',
+      top: 200 + 100,
+      left: 150,
+      width: 50,
+      height: 200,
+      backgroundColor: 'green'
+    }
+  }));
+};
+
+var _default = Pine;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"components/ForeGround.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ForeGround = function ForeGround() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      position: 'absolute',
+      bottom: 0,
+      width: 300,
+      height: 100,
+      backgroundColor: 'brown'
+    }
+  });
+};
+
+var _default = ForeGround;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js"}],"components/Game.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Bird = _interopRequireDefault(require("./Bird"));
+
+var _Pipe = _interopRequireDefault(require("./Pipe"));
+
+var _ForeGround = _interopRequireDefault(require("./ForeGround"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Game = function Game() {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    style: {
+      position: 'relative',
+      width: 300,
+      height: 500,
+      backgroundColor: 'pink'
+    }
+  }, /*#__PURE__*/_react.default.createElement(_Bird.default, null), /*#__PURE__*/_react.default.createElement(_Pipe.default, null), /*#__PURE__*/_react.default.createElement(_ForeGround.default, null));
+};
+
+var _default = Game;
+exports.default = _default;
+},{"react":"../node_modules/react/index.js","./Bird":"components/Bird.js","./Pipe":"components/Pipe.js","./ForeGround":"components/ForeGround.js"}],"components/App.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _Game = _interopRequireDefault(require("./Game"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var App = function App() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "Check environment.~~"));
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Game.default, null));
 };
 
 var _default = App;
 exports.default = _default;
-},{"react":"../node_modules/react/index.js"}],"index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Game":"components/Game.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
